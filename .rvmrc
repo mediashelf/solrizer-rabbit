@@ -1,1 +1,1 @@
-rvm use default@solrizer-fedora
+rvm gemset use solrizer-rabbit --create
