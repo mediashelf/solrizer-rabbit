@@ -23,7 +23,7 @@ module Solrizer
     end
 
     def self.work
-      worker_count = (ENV['workers'] || 4).to_i
+      worker_count = (ENV['threads'] || 1).to_i
 
       workers = []
       threads = []
@@ -38,6 +38,8 @@ module Solrizer
       threads.each do |thread|
         thread.join
       end 
+      puts "Sending commit to solr"
+      ActiveFedora::SolrService.instance.conn.commit
     end
 
 

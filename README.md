@@ -1,6 +1,6 @@
 # Solrizer::Rabbit
 
-TODO: Write a gem description
+Solrizer-rabbit is a gem for indexing ActiveFedora objects into solr by using RabbitMQ.
 
 ## Installation
 
@@ -18,7 +18,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+<code>
+# search fedora for a list of pids, write them into the queue
+rake solrizer:rabbit:enqueue
+
+# read the pids from fedora and index them. threads defaults to 1
+rake solrizer:rabbit:index threads=7
+</code>
+
 
 ## Contributing
 

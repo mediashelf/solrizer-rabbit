@@ -1,1 +1,1 @@
-rvm gemset use solrizer-rabbit --create
+rvm use default@solrizer-rabbit
