@@ -23,7 +23,7 @@ module Solrizer
     end
 
     def self.work
-      worker_count = ENV['workers'].to_i || 4
+      worker_count = (ENV['workers'] || 4).to_i
 
       workers = []
       threads = []
