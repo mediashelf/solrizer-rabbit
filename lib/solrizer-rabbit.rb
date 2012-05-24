@@ -53,5 +53,5 @@ module Solrizer
   end
 end
 
-load File.join(File.dirname(__FILE__),"../tasks/solrizer-rabbit.rake") if defined?(Rake)
+load File.join(File.dirname(__FILE__),"tasks/solrizer-rabbit.rake") if defined?(Rake)
 
