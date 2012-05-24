@@ -1,13 +1,13 @@
-namespace :solrizer
-  namespace :rabbit
+namespace :solrizer do
+  namespace :rabbit do
     desc "Enqueue all pids"
     tasks :enqueue do
-      SolrizerRabbit.enqueue
+      Solrizer::Rabbit.enqueue
     end
 
     desc "Run the index worker"
     tasks :index do
-      SolrizerRabbit.work
+      Solrizer::Rabbit.work
     end
   end
 end
